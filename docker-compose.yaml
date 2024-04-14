@@ -20,6 +20,7 @@ services:
       AWS_BUCKET: $AWS_BUCKET
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
+      NODE_ENV: $NODE_ENV
   backend-feed:
     image: udagram-api-feed
     volumes:
@@ -34,6 +35,7 @@ services:
       AWS_BUCKET: $AWS_BUCKET
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
+      NODE_ENV: $NODE_ENV
   frontend:
     image: udagram-frontend:local
     ports:
