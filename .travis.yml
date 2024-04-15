@@ -8,10 +8,10 @@ install:
   - export TAG=0.1.$TRAVIS_BUILD_NUMBER
   - echo $TAG
   - docker-compose -f docker-compose-build.yaml build
-  # - docker push loongluangkhot/udagram-reverseproxy:$TAG
-  # - docker push loongluangkhot/udagram-api-user:$TAG
-  # - docker push loongluangkhot/udagram-api-feed:$TAG
-  # - docker push loongluangkhot/udagram-frontend:$TAG
+  - docker push loongluangkhot/udagram-reverseproxy:$TAG
+  - docker push loongluangkhot/udagram-api-user:$TAG
+  - docker push loongluangkhot/udagram-api-feed:$TAG
+  - docker push loongluangkhot/udagram-frontend:$TAG
 
 script:
   - echo "Build $TAG is successful!"
