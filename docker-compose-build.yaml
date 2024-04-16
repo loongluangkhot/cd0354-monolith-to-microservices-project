@@ -3,7 +3,7 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
-    image: $DOCKER_USERNAME/reverseproxy:$TAG
+    image: $DOCKER_USERNAME/udagram-reverseproxy:$TAG
   backend_user:
     build:
       context: ./udagram-api-user
