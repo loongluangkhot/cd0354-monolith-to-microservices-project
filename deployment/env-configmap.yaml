@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+data:
+  POSTGRES_HOST: postgres.cumuxndfsi9x.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  AWS_BUCKET: udacity-67850718317
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  JWT_SECRET: mostsecret

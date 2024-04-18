@@ -43,3 +43,6 @@ venv/
 
 # env
 set_env.sh
+
+# aws eks secrets
+*-secret.yaml
