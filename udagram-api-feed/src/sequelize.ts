@@ -2,7 +2,7 @@ import {Sequelize} from 'sequelize-typescript';
 import {config} from './config/config';
 import { SequelizeConfig } from 'sequelize-typescript/lib/types/SequelizeConfig';
 
-let sequelizeConfig: SequelizeConfig = {
+const sequelizeConfig: SequelizeConfig = {
   'username': config.username,
   'password': config.password,
   'database': config.database,
