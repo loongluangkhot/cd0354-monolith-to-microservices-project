@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: loongluangkhot/udagram-frontend:0.1.8
+        image: loongluangkhot/udagram-frontend:0.1.12
         ports:
         - containerPort: 80
