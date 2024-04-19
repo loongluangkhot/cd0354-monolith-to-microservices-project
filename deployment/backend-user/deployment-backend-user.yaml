@@ -17,8 +17,8 @@ spec:
       containers:
       - name: backend-user
         image: loongluangkhot/udagram-api-user:0.1.8
-        # ports:
-        # - containerPort: 8080
+        ports:
+        - containerPort: 8080
         env:
         - name: AWS_BUCKET
           valueFrom:

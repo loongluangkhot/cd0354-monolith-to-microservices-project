@@ -5,8 +5,8 @@ metadata:
   labels:
     svc: backend-user
 spec:
-  # ports:
-  # - port: 8080
-  #   protocol: TCP
+  ports:
+  - port: 8080
+    protocol: TCP
   selector:
     app: backend-user

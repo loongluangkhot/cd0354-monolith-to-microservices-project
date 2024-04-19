@@ -8,19 +8,13 @@ let sequelizeConfig: SequelizeConfig = {
   'database': config.database,
   'host': config.host,
   'dialect': config.dialect,
+  'dialectOptions': {
+    'ssl': {
+      'require': true,
+      'rejectUnauthorized': false,
+    },
+  },
   'storage': ':memory:',
 };
-
-if(process.env.NODE_ENV === "local") {
-  sequelizeConfig = {
-    ...sequelizeConfig,
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      }
-    },
-  };
-}
 
 export const sequelize = new Sequelize(sequelizeConfig);
