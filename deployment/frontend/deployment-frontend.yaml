@@ -19,3 +19,11 @@ spec:
         image: loongluangkhot/udagram-frontend:0.1.14
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            memory: "2000Mi"
+            cpu: "250m"
+          limits:
+            memory: "4000Mi"
+            cpu: "500m"
+          

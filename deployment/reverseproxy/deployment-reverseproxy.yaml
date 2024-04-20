@@ -19,3 +19,11 @@ spec:
         image: loongluangkhot/udagram-reverseproxy:0.1.14
         ports:
         - containerPort: 8080
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
+            
