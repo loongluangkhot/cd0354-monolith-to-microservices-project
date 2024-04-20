@@ -34,6 +34,18 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
     origin: '*',
   }));
 
+  // logger middleware
+  app.use((req, res, next) =>{
+    const requestId = Math.round(Math.random() * 1e10);
+    console.log(`[${requestId} | REQ | ${new Date().toLocaleString()}] ${req.method} ${req.url}`);
+  
+    res.on('finish', () => {
+      console.log(`[${requestId} | RES | ${new Date().toLocaleString()}] ${res.statusCode}`);
+    });
+  
+    next();
+  });
+
   app.use('/api/v0/', IndexRouter);
 
   // Root URI call
